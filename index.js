@@ -1,4 +1,4 @@
-import init, { navigate_to_page } from "./pkg/navigation.js";
+import init, { navigate_to_page } from "./navigation.js";
 
 async function run() {
   await init();
