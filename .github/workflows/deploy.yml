@@ -39,7 +39,7 @@ jobs:
           cp -r styles/ build
           cp -r pages/ build
           cp -r assets/ build
-          cp -r navigation/pkg/ build
+          cp navigation/pkg/* build
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
