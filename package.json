@@ -1,0 +1,14 @@
+{
+  "name": "navigation",
+  "version": "0.1.0",
+  "files": [
+    "navigation_bg.wasm",
+    "navigation.js",
+    "navigation.d.ts"
+  ],
+  "module": "navigation.js",
+  "types": "navigation.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
