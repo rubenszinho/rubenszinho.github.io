@@ -39,7 +39,7 @@ jobs:
           cp -r styles/ build
           cp -r pages/ build
           cp -r assets/ build
-          cp navigation/pkg/* build
+          cp -r navigation/pkg/ build
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -47,3 +47,4 @@ jobs:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: build
           publish_branch: production
+          keep_files: true
