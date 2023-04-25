@@ -22,7 +22,10 @@ jobs:
 
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-
+        
+      - name: Build the Rust wasm package
+        run: wasm-pack build navigation --target web
+        
       - name: Clean previous build
         run: rm -rf build/
 
@@ -36,10 +39,8 @@ jobs:
           cp -r styles/ build
           cp -r pages/ build
           cp -r assets/ build
-
-      - name: Build the Rust wasm package
-        run: wasm-pack build navigation --target web --out-dir ../build/pkg
-
+          cp -r navigation/pkg/ build
+          
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
